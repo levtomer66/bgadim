@@ -12,7 +12,7 @@
     ],
     "build": {
         "env": {
-            "API_URL": "https://monorepo.arukomp.now.sh"
+            "API_URL": "https://bgadim.vercel.app"
         }
     },
     "routes": [

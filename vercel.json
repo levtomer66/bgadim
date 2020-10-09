@@ -16,10 +16,20 @@
         }
     },
     "routes": [
-        { "src": "/api/hello(.*)", "dest": "api/routes/hello" },
-        { "src": "/api/(.*)", "dest": "api/routes/$1" },
-        { "src": "/api", "dest": "api/routes/index.js" },
+        { "src": "/api/hello(.*)", "headers":
+            {
+              "access-control-allow-origin": "*"
+            }, "dest": "api/routes/hello" },
+        { "src": "/api/(.*)", "headers":
+            {
+                "access-control-allow-origin": "*"
+            }, "dest": "api/routes/$1" },
+        { "src": "/api", "headers":
+            {
+                "access-control-allow-origin": "*"
+            }, "dest": "api/routes/index.js" },
         { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
         { "src": "/(.*)", "dest": "$1" }
     ]
+
 }

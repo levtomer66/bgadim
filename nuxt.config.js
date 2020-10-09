@@ -1,8 +1,6 @@
 import pkg from './package'
 
 export default {
-  mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -39,7 +37,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/axios',
+    ['@nuxtjs/axios', { proxy: true }],
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
@@ -54,5 +52,6 @@ export default {
     */
     extend(config, ctx) {
     }
-  }
+  },
+  components: true
 }

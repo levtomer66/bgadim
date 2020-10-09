@@ -17,6 +17,12 @@ html {
   box-sizing: border-box;
 }
 
+body div{
+    padding:0;
+    margin:0;
+    float: left;
+}
+
 *,
 *:before,
 *:after {
